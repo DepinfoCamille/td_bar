@@ -7,11 +7,12 @@ const BasicStrategy = require('passport-http').BasicStrategy;
 
 const DB = require('../db.js');
 
-Passport.use(new BasicStrategy((username, password, done) => {
+Passport.use(new BasicStrategy((username, auth, password, done) => {
 
     DB.get('SELECT * FROM USERS WHERE USERNAME = ?' ,[username], (err, user) => {
 
         if (err) {
+            console.log("erreur dans get user");
             return done(err);
         }
         if (!user) {

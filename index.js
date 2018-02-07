@@ -6,13 +6,13 @@ const app = Express();
 
 app.use(BP.json());
 
-app.use('/posts', require('./routes/posts').router);
+app.use('/bottles', require('./routes/bottles').router);
 app.use(require('./routes/users').router);
 
 app.listen(8080, (err) => {
 
     if (err) {
-        console.log(err);
+        console.log("Erreur lors de l'écoute : " +err);
     }
     else {
         console.log('app listening on port 8080');
