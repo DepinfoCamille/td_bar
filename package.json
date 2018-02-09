@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "fs": "0.0.1-security",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "celebrate": "^7.0.4",
     "code": "^5.1.2",
+    "jio": "0.0.4",
     "joi": "^13.1.2",
     "lab": "^14.3.2",
     "supertest": "^3.0.0"
